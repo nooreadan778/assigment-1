@@ -1,71 +1,27 @@
-#include<iostream>
-#include<fstream>
-using namespace std;
-
-int arr[10];
-
-void inputArray()
-{
-    for(int i = 0; i < 10; i++)
-    {
-        cin >> arr[i];
-    }
-}
-
-void displayArray()
-{
-    for(int i = 0; i < 10; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
-
-int calculateSum()
-{
-    int sum = 0;
-    for(int i = 0; i < 10; i++)
-    {
-        sum = sum + arr[i];
-    }
-    return sum;
-}
-
-void writeToFile()
-{
-    ofstream myfile;
-    myfile.open("data.txt");
-    for(int i = 0; i < 10; i++)
-    {
-        myfile << arr[i] << endl;
-    }
-    myfile.close();
-}
-
-void readFromFile()
-{
-    int temp[10];
-    ifstream myfile;
-    myfile.open("data.txt");
-    for(int i = 0; i < 10; i++)
-    {
-        myfile >> temp[i];
-        cout << temp[i] << " ";
-    }
-    cout << endl;
-    myfile.close();
-}
-
-int main()
-{
-    inputArray();
-    displayArray();
-
-    int s = calculateSum();
-    cout << s << endl;
-
-    writeToFile();
-    readFromFile();
-
-    return 0;
-}
+This is as an assignment in C++. It uses arrays, functions, and file handling concepts.
+Features
+- Input 10 values in array
+- Display array elements
+- Calculate sum of all elements
+- Store data in file
+- Read data from file
+Concepts Used
+- Arrays
+- Functions
+- File Handling
+  Loops
+How to Run
+1. Open code in any C++ compiler
+2. Compile the program
+3. Run the program
+4. Enter 10 numbers
+Sample Output
+Enter 10 numbers:
+1 2 3 4 5 6 7 8 9 10
+Array Elements:
+1 2 3 4 5 6 7 8 9 10
+Sum = 55
+Data Read From File:
+1 2 3 4 5 6 7 8 9 10
+Author
+noor e adan
